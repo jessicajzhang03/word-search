@@ -2,7 +2,7 @@
 # https://medium.com/@msgold/creating-a-word-search-puzzle-b499533e938
 # hahaha. i am a THIEF. uh oh!
 
-import requests # type: ignore
+import requests
 import random
 import string
 
@@ -238,15 +238,18 @@ def display_board(board):
     for row in board:
         print(' '.join(row))
 
-response = requests.get("https://random-word-api.herokuapp.com/word?number=1000")
-words = [word.upper() for word in response.json() if 16 >= len(word) >= 4]
-# words.sort(key=len, reverse=True)
-# maxlength = len(words[0])
-print(words)
-print(f'total words: {len(words)}')
+def create_board(size, max_words=float('inf'), word_list_length=1000):
+    url = f'https://random-word-api.herokuapp.com/word?number={word_list_length}'
+    response = requests.get(url)
+    words = [word.upper() for word in response.json() if 16 >= len(word) >= 4]
+    print(words)
+    print(f'total words: {len(words)}')
+    board = create_word_search(words, size, max_words)
+    return board
 
-board = create_word_search(words, 16, 40)
-display_board(board)
+if __name__ == '__main__':
+    board = create_board(16, 40)
+    display_board(board)
 
 
 # 20x20 grid comes with roughly 60 words if trying 1000
