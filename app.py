@@ -6,10 +6,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def launch_word_search():
-    # board = ws.create_board(16, 1)
+    board, words = ws.create_board(16, 5)
+    word_list = [word[0] for word in words]
+    word_list.sort()
 
     # use a preloaded board for debugging
-    with open('fixed_board.txt', 'r') as f:
-        board_string = f.readline()
-        board = ast.literal_eval(board_string)
-    return render_template('index.html', board=board)
+    # with open('fixed_board.txt', 'r') as f:
+    #     board_string = f.readline()
+    #     board = ast.literal_eval(board_string)
+    return render_template('index.html', board=board, word_list=word_list)

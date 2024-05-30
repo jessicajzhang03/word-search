@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    min-height: 100vh - 100px;
+    /* min-height: 100vh - 100px; */
     max-width: 950px;
     margin: 0px auto;
     padding: 50px;
@@ -22,7 +22,6 @@ td {
 
 td .ws-letter {
   aspect-ratio: 1 / 1 ;
-  border-style: solid;
   font-size: 2.4rem;
   display: flex;
   align-items: center;
@@ -32,13 +31,37 @@ td .ws-letter {
 }
 
 td .ws-letter:hover {
-  background: gold;
+  /* background: gold; */
 }
 
-td .ws-letter:active {
+/* td .ws-letter:active {
   background: green;
+} */
+
+.correct {
 }
 
+.selected {
+  background: rgba(227,93,245,0.5) !important;
+}
+
+.invisible {
+  display: none;
+}
+
+.dead {
+  text-decoration: line-through;
+}
+
+#word-selected {
+  width: 50%;
+}
+
+#timer {
+  width: 10%;
+}
+
+/* deleted */
 .noselectA {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */

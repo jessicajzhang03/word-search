@@ -12,17 +12,29 @@
 <body>
 <h1>word search</h1>
 
-<table id="ws-table">
+<!-- <div style="float: left; max-width: 15%;"> -->
+<div style="float: left;">
+<p id="timer">00:00</p>
+<p id="word-counter"><b>words: 0/{{ word_list|length }}</b></p>
+{% for word in word_list %}
+    <div class="ws-word" id="ws-word_{{ word }}">{{ word }}</div>
+{% endfor %}
+</div>
+
+<!-- <div style="margin-left: 15%; float: right;"> -->
+<div style="float: right;">
+<p id="word-selected"></p>
+
+<table id="ws-table" cellpadding="0" cellspacing="0">
     {% for row in board %}
         <tr class="ws-row">
             {% for letter in row %}
-                <td><div class="ws-letter noselect" draggable="true">{{ letter }}</div></td>
+                <td><div class="ws-letter noselect">{{ letter }}</div></td>
             {% endfor %}
         </tr>
     {% endfor %}
 </table>
-
-<p id="demo"></p>
+</div>
 
 </body>
 </html>

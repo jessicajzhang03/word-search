@@ -232,7 +232,7 @@ def create_word_search(words, size, max_words=float('inf')):
         word_info = word_list[i]
         print(f'{i+1}. {word_info[0]} at ({word_info[1][0]}, {word_info[1][1]}) with {word_info[1][3]} crossings in direction {word_info[1][2]}')
 
-    return board
+    return (board, word_list)
 
 def display_board(board):
     for row in board:
@@ -244,8 +244,8 @@ def create_board(size, max_words=float('inf'), word_list_length=1000):
     words = [word.upper() for word in response.json() if size >= len(word) >= 4]
     print(words)
     print(f'total words: {len(words)}')
-    board = create_word_search(words, size, max_words)
-    return board
+    board, word_list = create_word_search(words, size, max_words)
+    return (board, word_list)
 
 if __name__ == '__main__':
     board = create_board(16, 40)
