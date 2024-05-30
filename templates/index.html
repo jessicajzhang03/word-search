@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/ws-script.js" defer></script>
+
+    <title>word search</title>
+</head>
+<body>
+<h1>word search</h1>
+
+<table id="ws-table">
+    {% for row in board %}
+        <tr class="ws-row">
+            {% for letter in row %}
+                <td><div class="ws-letter noselect" draggable="true">{{ letter }}</div></td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+<p id="demo"></p>
+
+</body>
+</html>

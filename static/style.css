@@ -1,0 +1,50 @@
+html {
+    font-size: 62.5%
+}
+
+body {
+    min-height: 100vh - 100px;
+    max-width: 950px;
+    margin: 0px auto;
+    padding: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6rem;
+}
+
+table {
+  height: 75vh;
+  width: 75vh;
+}
+
+td {
+  position: relative;
+}
+
+td .ws-letter {
+  aspect-ratio: 1 / 1 ;
+  border-style: solid;
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+td .ws-letter:hover {
+  background: gold;
+}
+
+td .ws-letter:active {
+  background: green;
+}
+
+.noselectA {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
