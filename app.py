@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def launch_word_search():
-    board, words = ws.create_board(16, 5)
+    board, words = ws.create_board(16, 40)
     word_list = [word[0] for word in words]
     word_list.sort()
 

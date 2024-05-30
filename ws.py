@@ -226,7 +226,7 @@ def create_word_search(words, size, max_words=float('inf')):
         if words_placed == max_words:
             break
 
-    # fill_empty(board)
+    fill_empty(board)
 
     for i in range(len(word_list)):
         word_info = word_list[i]
