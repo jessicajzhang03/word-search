@@ -16,9 +16,11 @@
 <div style="float: left;">
 <p id="timer">00:00</p>
 <p id="word-counter"><b>words: 0/{{ word_list|length }}</b></p>
+<div id="word-list">
 {% for word in word_list %}
     <div class="ws-word" id="ws-word_{{ word }}">{{ word }}</div>
 {% endfor %}
+</div>
 </div>
 
 <!-- <div style="margin-left: 15%; float: right;"> -->

@@ -3,12 +3,12 @@ html {
 }
 
 body {
-    /* min-height: 100vh - 100px; */
-    max-width: 950px;
-    margin: 0px auto;
-    padding: 50px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.6rem;
+  /* min-height: 100vh - 100px; */
+  max-width: 950px;
+  margin: 0px auto;
+  padding: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.6rem;
 }
 
 table {
@@ -47,7 +47,13 @@ td .ws-letter {
 }
 
 #timer {
-  width: 10%;
+  /* width: 10%; */
+}
+
+#word-list {
+  overflow-y: auto;
+  height: 60vh;
+  width: 200%;
 }
 
 /* deleted */
