@@ -30,17 +30,6 @@ td .ws-letter {
   user-select: none;
 }
 
-td .ws-letter:hover {
-  /* background: gold; */
-}
-
-/* td .ws-letter:active {
-  background: green;
-} */
-
-.correct {
-}
-
 .selected {
   background: rgba(227,93,245,0.5) !important;
 }
