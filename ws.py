@@ -241,7 +241,7 @@ def display_board(board):
 def create_board(size, max_words=float('inf'), word_list_length=1000):
     url = f'https://random-word-api.herokuapp.com/word?number={word_list_length}'
     response = requests.get(url)
-    words = [word.upper() for word in response.json() if 16 >= len(word) >= 4]
+    words = [word.upper() for word in response.json() if size >= len(word) >= 4]
     print(words)
     print(f'total words: {len(words)}')
     board = create_word_search(words, size, max_words)
