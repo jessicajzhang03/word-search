@@ -115,6 +115,7 @@ var calculateWordBetween = function(e) {
         selectedWord += selected[i].innerHTML;
     }
 
+    document.getElementById("word-selected").classList.remove("invisible");
     document.getElementById("word-selected").innerHTML = selectedWord;
 }
 
