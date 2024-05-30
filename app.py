@@ -1,12 +1,13 @@
 from flask import Flask, render_template
 import ws
-import ast
+from random import randint
+# import ast
 
 app = Flask(__name__)
 
 @app.route("/")
 def launch_word_search():
-    board, words = ws.create_board(16, 35)
+    board, words = ws.create_board(16, randint(35,39))
     word_list = [word[0] for word in words]
     word_list.sort()
 
